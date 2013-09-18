@@ -25,9 +25,24 @@ cd vim-config
 cp .vimrc ~/.vimrc
 ```
 
-4. Copy submoduel to you vim bundle
+4. Copy submodule to you vim bundle
+In vim-config directory:
 ```
+cp -r .vim/bundle/* ~/.vim/bundle/
 ```
 
 # List of plugins
+.vim/bundle/ctrlp.vim
+.vim/bundle/emmet-vim
+.vim/bundle/syntastic
+.vim/bundle/vim-bundler
+.vim/bundle/vim-endwise
+.vim/bundle/vim-fugitive
+.vim/bundle/vim-gitgutter
+.vim/bundle/vim-indent-guides
+.vim/bundle/vim-jsbeautify
+.vim/bundle/vim-powerline
+.vim/bundle/vim-rails
+.vim/bundle/vim-sensible
+
 
