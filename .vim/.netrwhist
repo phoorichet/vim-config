@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/Lock/Dropbox/CMU/S13 18-845 Internet Services/project2/gtest-1.6.0/xcode/gtest.xcodeproj'
-let g:netrw_dirhist_2='/Users/Lock/Dropbox/CMU/S13 18-845 Internet Services/project2/gtest-1.6.0/xcode/gtest.xcodeproj/xcuserdata'
-let g:netrw_dirhist_3='/Users/Lock/Dropbox/CMU/S13 18-845 Internet Services/project2/gtest-1.6.0/xcode/gtest.xcodeproj/xcuserdata/Lock.xcuserdatad'
-let g:netrw_dirhist_4='/Users/Lock/Dropbox/CMU/S13 18-845 Internet Services/project2/gtest-1.6.0/xcode/gtest.xcodeproj/xcuserdata/Lock.xcuserdatad/xcschemes'
