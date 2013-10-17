@@ -77,6 +77,7 @@ map <Leader>m <esc>:tabnext<CR>
 
 nmap <leader>d :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
+let g:NERDTreeWinPos = "right"
 
 " map sort function to a key (use v+movement for selecting a block)
 vnoremap <Leader>s :sort<CR>
@@ -84,6 +85,10 @@ vnoremap <Leader>s :sort<CR>
 " Easier indentation
 vnoremap < <gv
 vnoremap > >gv
+
+
+" Automatically change the current directory
+set autochdir
 
 
 " Highlight whitespace
