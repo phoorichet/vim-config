@@ -88,7 +88,7 @@ vnoremap > >gv
 
 
 " Automatically change the current directory
-set autochdir
+"set autochdir
 
 
 " Highlight whitespace
@@ -156,3 +156,22 @@ autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+
+" Emmet
+" https://github.com/mattn/emmet-vim/
+" div#classname    then <ctr+y> + ,
+
+" Comments
+" https://github.com/tomtom/tcomment_vim
+" key <c+_><c+_>
+"
+
+" Tabular for alignment
+" http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
+if exists(":Tabularize")
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a: :Tabularize /:\zs<CR>
+  vmap <Leader>a: :Tabularize /:\zs<CR>
+endif
