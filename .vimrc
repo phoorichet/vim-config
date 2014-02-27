@@ -175,3 +175,6 @@ if exists(":Tabularize")
   nmap <Leader>a: :Tabularize /:\zs<CR>
   vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
+
+" Ctags + CtrlPTag
+nnoremap <leader>. :CtrlPTag<cr>
