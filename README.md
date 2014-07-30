@@ -32,6 +32,17 @@ In vim-config directory:
 cp -r .vim/bundle/* ~/.vim/bundle/
 ```
 
+* If running vim causes an error about pathogen#infect. That means "Install Vim Pathogen" didn't work, because curl didn't get the file. Then run this command:
+```
+cp -r .vim/autoload/* ~/.vim/autoload/
+```
+
+* If running `git commit` and save but get `There was a problem with the editor 'vi'`. (Perhaps only on Mac OS X Snow Leopard)
+Just run this:
+```
+git config --global core.editor /usr/bin/vim
+```
+
 # List of plugins
 1. vim/bundle/ctrlp.vim
 2. vim/bundle/emmet-vim
