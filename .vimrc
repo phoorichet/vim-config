@@ -7,8 +7,8 @@ autocmd! bufwritepost .vimrc source %
 execute pathogen#infect()
 
 syntax on                       " syntax highlighting
-set shiftwidth=2                " spaces to (auto)indent
-set softtabstop=2               " spaces for tab
+set shiftwidth=4                " spaces to (auto)indent
+set softtabstop=4               " spaces for tab
 set smartindent                 " autoindent for the next level
 set expandtab                   " tabs to spaces
 set ls=2                        " show status (even with one window)
@@ -52,9 +52,9 @@ let mapleader=","
 
 " Bind nohl
 " Remove highlight of your last search
-"noremap <C-n> :nohl<CR>
-"vnoremap <C-n> :nohl<CR>
-"inoremap <C-n> :nohl<CR>
+noremap <C-n> :nohl<CR>
+vnoremap <C-n> :nohl<CR>
+inoremap <C-n> :nohl<CR>
 
 " Quick save command
 noremap <Leader>s :update<CR>
@@ -176,5 +176,23 @@ if exists(":Tabularize")
   vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
 
-" Ctags + CtrlPTag
 nnoremap <leader>. :CtrlPTag<cr>
+
+" Ctags
+set tags=./tags
+
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
+
+" Golang
+au FileType go nmap <Leader>s <Plug>(go-implements)
+au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+
+let g:tagbar_ctags_bin = '/usr/local/Cellar/ctags/5.8/bin/ctags'
