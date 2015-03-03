@@ -39,6 +39,10 @@ set textwidth=0
 set formatoptions-=t
 set wrapmargin=0
 
+" UTF-8 Encoding
+set encoding=utf-8  " The encoding displayed.
+set fileencoding=utf-8  " The encoding written to file.
+
 " following two lines highlights in blue if over 80 characters
 hi OverLength ctermbg=darkblue ctermfg=white
 match OverLength /\%80v.\+/

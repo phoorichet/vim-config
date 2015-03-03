@@ -49,3 +49,9 @@
 [submodule ".vim/bundle/tagbar"]
 	path = .vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar
+[submodule "vim-go"]
+	path = vim-go
+	url = https://github.com/fatih/vim-go
+[submodule "tagbar"]
+	path = tagbar
+	url = https://github.com/majutsushi/tagbar
