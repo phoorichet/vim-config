@@ -8,9 +8,10 @@ execute pathogen#infect()
 
 syntax on                       " syntax highlighting
 set shiftwidth=4                " spaces to (auto)indent
-set softtabstop=4               " spaces for tab
+set softtabstop=2               " spaces for tab
+set tabstop=4                   " The width of a TAB is set to 4.
 set smartindent                 " autoindent for the next level
-set expandtab                   " tabs to spaces
+" set expandtab                   " tabs to spaces
 set ls=2                        " show status (even with one window)
 hi StatusLine ctermfg=darkgray  " default status line with filename
 set backspace=indent,eol,start  " backspace fixits
@@ -38,10 +39,6 @@ set incsearch                   " incremental search
 set textwidth=0
 set formatoptions-=t
 set wrapmargin=0
-
-" UTF-8 Encoding
-set encoding=utf-8  " The encoding displayed.
-set fileencoding=utf-8  " The encoding written to file.
 
 " following two lines highlights in blue if over 80 characters
 hi OverLength ctermbg=darkblue ctermfg=white
@@ -79,6 +76,7 @@ map <c-l> <c-w>l
 map <Leader>n <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
 
+" NERDTree
 nmap <leader>d :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
 let g:NERDTreeWinPos = "right"
@@ -153,13 +151,13 @@ autocmd VimResized * :wincmd =
 " cd ~/.vim/bundle
 " git clone git://github.com/tpope/vim-fugitive.git
 
-map <c-f> :call JsBeautify()<cr>
+" map <c-f> :call JsBeautify()<cr>
 " or
-autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 " " for html
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " " for css or scss
-autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+" autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 
 " Emmet
@@ -180,6 +178,8 @@ if exists(":Tabularize")
   vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
 
+" Allow quick search tag
+" http://andrew.stwrt.ca/posts/vim-ctags/
 nnoremap <leader>. :CtrlPTag<cr>
 
 " Ctags
@@ -187,6 +187,7 @@ set tags=./tags
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
+let g:tagbar_ctags_bin = '/usr/local/Cellar/ctags/5.8/bin/ctags'
 
 " Golang
 au FileType go nmap <Leader>s <Plug>(go-implements)
@@ -198,5 +199,7 @@ au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
-
-let g:tagbar_ctags_bin = '/usr/local/Cellar/ctags/5.8/bin/ctags'
+let g:go_fmt_command = "goimports"
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
