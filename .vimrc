@@ -7,9 +7,9 @@ autocmd! bufwritepost .vimrc source %
 execute pathogen#infect()
 
 syntax on                       " syntax highlighting
-set shiftwidth=4                " spaces to (auto)indent
-set softtabstop=2               " spaces for tab
-set tabstop=4                   " The width of a TAB is set to 4.
+set shiftwidth=8                " spaces to (auto)indent
+set softtabstop=8               " spaces for tab
+set tabstop=8                   " The width of a TAB is set to 4.
 set smartindent                 " autoindent for the next level
 " set expandtab                   " tabs to spaces
 set ls=2                        " show status (even with one window)
@@ -18,9 +18,9 @@ set backspace=indent,eol,start  " backspace fixits
 set mouse=a                     " mouse use
 set history=10000               " history
 set undolevels=10000            " 700 undolevel
-set list                        " show trailing whitespace
-set listchars=tab:▸\ ,trail:▫
-set number                      " set line number
+" set list                        " show trailing whitespace
+" set listchars=tab:▸\ ,trail:▫
+" set number                      " set line number
 set ruler                       " cursor pos
 set directory-=.                " don't store swapfiles in the current directory
 set scrolloff=3                 " show context above/below cursorline
@@ -41,8 +41,8 @@ set formatoptions-=t
 set wrapmargin=0
 
 " following two lines highlights in blue if over 80 characters
-hi OverLength ctermbg=darkblue ctermfg=white
-match OverLength /\%80v.\+/
+" hi OverLength ctermbg=darkblue ctermfg=white
+" match OverLength /\%80v.\+/
 
 " Better copy & paste
 set pastetoggle=<F2>
@@ -203,3 +203,12 @@ let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:go_list_type = "quickfix"
+
+" monokai
+let g:molokai_original = 1
+
+" ctlp
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
