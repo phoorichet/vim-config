@@ -75,6 +75,8 @@ map <c-l> <c-w>l
 " Eaiser moving between tabs
 map <Leader>n <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
+nmap J }
+nmap K {
 
 " NERDTree
 nmap <leader>d :NERDTreeToggle<CR>
@@ -206,6 +208,7 @@ let g:go_highlight_structs = 1
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:go_list_type = "quickfix"
+let g:go_doc_keywordprg_enabled = 0 " disable do doc keyword with K binding
 
 " monokai
 let g:molokai_original = 1
